@@ -1,4 +1,5 @@
 <mvc:View
+    xmlns:l="sap.ui.layout"
     controllerName="product.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
@@ -8,6 +9,7 @@
         title="{i18n>title}"
     >
         <content>
+            <!-- This is a header text -->
             <Text
                 id="idHead"
                 text="Hello World"
@@ -15,26 +17,77 @@
                 width="100%"
                 class="sapMH3FontSize"
             />
-            <Label
-                labelFor="idName"
-                text="Enter Name"
-                class="sapUiTinyMarginTop"
-            />
-            <Input
-                required="true"
-                id="idName"
-                type="Text"
-                placeholder="Sudarshan C"
-                width="35%"
-                class="sapUiSmallMarginBegin sapUiSmallMarginEnd"
-            />
-            <Button
-                type="Emphasized"
-                icon="sap-icon://arrow-right"
-                text="Submit"
-                id="idButton"
-                press="onpress"
-            />
+            <!-- Panel for user input -->
+            <Panel
+                backgroundDesign="Translucent"
+                expandable="true"
+                headerText="Header Trails"
+                width="80%"
+            >
+                <Label
+                    labelFor="idName"
+                    text="Enter Name"
+                    class="sapUiTinyMarginTop"
+                />
+                <Input
+                    required="true"
+                    id="idName"
+                    type="Text"
+                    placeholder="Sudarshan C"
+                    width="35%"
+                    class="sapUiSmallMarginBegin sapUiSmallMarginEnd"
+                />
+                <Button
+                    type="Emphasized"
+                    icon="sap-icon://arrow-right"
+                    text="Submit"
+                    id="idButton"
+                    press="onpress"
+                />
+            </Panel>
+
+            <!-- Panel for employee details -->
+            <Panel
+                headerText="Employee Details"
+                stickyHeader="true"
+                expandable="true"
+                expanded="true"
+                width="90%"
+                class = "sapUiTinyMarginBegin"
+            >
+                <l:Grid defaultSpan="L3 M3">
+                    <!-- 12 GRID IN TOTAL -> ELEMENTS HAI 4chaiye => 12/4 = 3 -->
+                    <Label
+                        class="sapUiTinyMarginTop"
+                        text="Employee ID"
+                        labelFor="idE"
+                    />
+                    <Input
+                        type="Text"
+                        id="idE"
+                    />
+                    <Label
+                        text="Employee Name"
+                        class="sapUiTinyMarginTop"
+                    />
+                    <Input type="Text" />
+                    <Label
+                        text="Employee Age"
+                        class="sapUiTinyMarginTop"
+                    />
+                    <Input type="Text" />
+                    <Label
+                        text="Employee Domain"
+                        class="sapUiTinyMarginTop"
+                    />
+                    <Input type="Text" />
+                    <Label
+                        text="Employee Dept"
+                        class="sapUiTinyMarginTop"
+                    />
+                    <Input type="Text" />
+                </l:Grid>
+            </Panel>
         </content>
     </Page>
 </mvc:View>
