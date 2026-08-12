@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="product.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Text
+                id="idHead"
+                text="Hello World"
+                textAlign="Center"
+                width="100%"
+                class="sapMH3FontSize"
+            />
+            <Label
+                labelFor="idName"
+                text="Enter Name"
+                class="sapUiTinyMarginTop"
+            />
+            <Input
+                required="true"
+                id="idName"
+                type="Text"
+                placeholder="Sudarshan C"
+                width="35%"
+                class="sapUiSmallMarginBegin sapUiSmallMarginEnd"
+            />
+            <Button
+                type="Emphasized"
+                icon="sap-icon://arrow-right"
+                text="Submit"
+                id="idButton"
+                press="onpress"
+            />
+        </content>
+    </Page>
+</mvc:View>
