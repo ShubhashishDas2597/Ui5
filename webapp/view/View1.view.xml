@@ -1,4 +1,6 @@
 <mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form"
     xmlns:l="sap.ui.layout"
     controllerName="product.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
@@ -53,40 +55,65 @@
                 expandable="true"
                 expanded="true"
                 width="90%"
-                class = "sapUiTinyMarginBegin"
+                class="sapUiTinyMarginBegin"
             >
                 <l:Grid defaultSpan="L3 M3">
-                    <!-- 12 GRID IN TOTAL -> ELEMENTS HAI 4chaiye => 12/4 = 3 -->
-                    <Label
-                        class="sapUiTinyMarginTop"
-                        text="Employee ID"
-                        labelFor="idE"
-                    />
-                    <Input
-                        type="Text"
-                        id="idE"
-                    />
-                    <Label
-                        text="Employee Name"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <Input type="Text" />
-                    <Label
-                        text="Employee Age"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <Input type="Text" />
-                    <Label
-                        text="Employee Domain"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <Input type="Text" />
-                    <Label
-                        text="Employee Dept"
-                        class="sapUiTinyMarginTop"
-                    />
-                    <Input type="Text" />
+                    <l:content>
+                        <!-- 12 GRID IN TOTAL -> ELEMENTS HAI 4chaiye => 12/4 = 3 -->
+                        <Label
+                            class="sapUiTinyMarginTop"
+                            text="Employee ID"
+                            labelFor="idE"
+                        />
+                        <Input
+                            type="Text"
+                            id="idE"
+                        />
+                        <Label
+                            text="Employee Name"
+                            class="sapUiTinyMarginTop"
+                        />
+                        <Input type="Text" />
+                        <Label
+                            text="Employee Age"
+                            class="sapUiTinyMarginTop"
+                        />
+                        <Input type="Text" />
+                        <Label
+                            text="Employee Domain"
+                            class="sapUiTinyMarginTop"
+                        />
+                        <Input type="Text" />
+                        <Label
+                            text="Employee Dept"
+                            class="sapUiTinyMarginTop"
+                        />
+                        <Input type="Text" />
+                    </l:content>
                 </l:Grid>
+                <f:SimpleForm
+                    editable="true"
+                    title="Organization Details"
+                    layout="ResponsiveGridLayout"
+                    labelSpanL="4"
+                    labelSpanM="4"
+                    emptySpanM="0"
+                    emptySpanL="0"
+                >
+                    <f:content>
+                        <core:Title text="Org Details" />
+                        <Label text="Org Name" />
+                        <Input type="Text" />
+                        <Label text="Org Location" />
+                        <Input type="Text" />
+
+                        <core:Title text="Service Details" />
+                        <Label text="Years of Service" />
+                        <Input type="Text" />
+                        <Label text="Total YOE" />
+                        <Input type="Text" />
+                    </f:content>
+                </f:SimpleForm>
             </Panel>
         </content>
     </Page>
