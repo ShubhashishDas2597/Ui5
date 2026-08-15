@@ -1,12 +1,13 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-], (Controller, JSONModel) => {
+    "sap/ui/model/json/JSONModel",
+    "sap/m/MessageBox"
+], (Controller, JSONModel, MessageBox) => {
     "use strict";
 
     return Controller.extend("product.controller.View1", {
         onInit() {
-           // this.getView().byId('idButton').setEnabled(false);
+            // this.getView().byId('idButton').setEnabled(false);
 
             var oViewModel = new JSONModel({
                 inputValue: ""
@@ -20,6 +21,18 @@ sap.ui.define([
                 this.getView().byId('idButton').setIcon('sap-icon://arrow-left');
             }
 
+        },
+        onPressButton() {
+            var employeeId = this.getView().byId('idE').getValue();
+            if (employeeId === '') {
+                // MessageBox.show("Empid Needed");
+                MessageBox.error("Empid Needed", {
+                    title: "Error Screen"
+                });
+                this.getView().byId('idE').setValueState('Error');
+                this.this.getView().byId('idE').setValueStateText("Here");
+            }
+            console.log(employeeId);
         }
     });
 });

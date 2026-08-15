@@ -90,7 +90,7 @@
                                         text="Employee ID"
                                         labelFor="idE"
                                     />
-                                    <Input
+                                    <Input required="true"
                                         type="Text"
                                         id="idE"
                                     />
@@ -168,7 +168,8 @@
                     <Button
                         class="sapUISmallMarginEnd"
                         type="Emphasized"
-                        text="Click"
+                        text="Submit"
+                        press="onPressButton"
                     />
                 </FlexBox>
             </OverflowToolbar>
