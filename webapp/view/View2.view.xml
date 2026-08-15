@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+    controllerName="product.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        showNavButton="true"
+        navButtonPress="onNavBack"
+    >
+        <content>
+        <Text text="hel"></Text>
+            <!-- Add your UI controls here -->
+        </content>
+    </Page>
+</mvc:View>
