@@ -10,8 +10,10 @@
     >
         <content>
             <Table
+                growing="true"
+                growingThreshold="20"
                 items="{
-                path: '/ProductCollection' 
+                path: 'Prod>/ProductCollection' 
             }"
             >
                 <columns>
