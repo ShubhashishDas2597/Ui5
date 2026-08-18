@@ -9,8 +9,36 @@
         navButtonPress="onNavBack"
     >
         <content>
-        <Text text="hel"></Text>
-            <!-- Add your UI controls here -->
+            <Table
+                items="{
+                path: '/ProductCollection' 
+            }"
+            >
+                <columns>
+                    <Column>
+                        <Text text='Product ID' />
+                    </Column>
+                    <Column>
+                        <Text text='Category' />
+                    </Column>
+                    <Column>
+                        <Text text='Name' />
+                    </Column>
+                    <Column>
+                        <Text text='Description' />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Bottom">
+                        <cells>
+                            <Text text="{Prod>ProductId}" />
+                            <Text text="{Prod>Category}" />
+                            <Text text="{Prod>Name}" />
+                            <Text text="{Prod>Description}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
         </content>
     </Page>
 </mvc:View>
