@@ -14,7 +14,7 @@
             <!-- This is a header text -->
             <Text
                 id="idHead"
-                text="Hello World"
+                text="Hello Worlds"
                 textAlign="Center"
                 width="100%"
                 class="sapMH3FontSize"
