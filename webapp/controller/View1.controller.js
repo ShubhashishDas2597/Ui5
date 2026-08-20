@@ -9,7 +9,6 @@ sap.ui.define([
     return Controller.extend("product.controller.View1", {
         onInit() {
             // this.getView().byId('idButton').setEnabled(false);
-
             var oViewModel = new JSONModel({
                 inputValue: ""
             });

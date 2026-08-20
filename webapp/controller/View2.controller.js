@@ -2,11 +2,14 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/core/routing/History",
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-], function (UIComponent, History, Controller, JSONModel) {
+    "sap/ui/model/json/JSONModel",
+    "../model/formatterfile"
+], function (UIComponent, History, Controller, JSONModel, formatterfile) {
     "use strict";
 
     return Controller.extend("product.controller.View2", {
+        format: formatterfile,
+
         onInit: function () {
             var oProdJson = new JSONModel("../model/products.json");
             this.getView().setModel(oProdJson, "Prod");

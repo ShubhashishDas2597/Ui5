@@ -9,16 +9,28 @@
         navButtonPress="onNavBack"
     >
         <content>
+            <!-- <Text text="{Prod>/ProductCollection/0/Name}"></Text> working stmt -->
             <Table
                 growing="true"
-                growingThreshold="20"
+                growingThreshold="2"
                 items="{
                 path: 'Prod>/ProductCollection' 
             }"
             >
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Text
+                            text="Products"
+                            class="sapMH5FontSize"
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
                 <columns>
                     <Column>
                         <Text text='Product ID' />
+                    </Column>
+                    <Column>
+                        <!-- <Text text='Image' /> -->
                     </Column>
                     <Column>
                         <Text text='Category' />
@@ -29,18 +41,71 @@
                     <Column>
                         <Text text='Description' />
                     </Column>
+                    <Column>
+                        <Text text='Price' />
+                    </Column>
+                    <Column>
+                        <Text text='Availability' />
+                    </Column>
                 </columns>
                 <items>
-                    <ColumnListItem vAlign="Bottom">
+                    <ColumnListItem vAlign="Middle">
                         <cells>
                             <Text text="{Prod>ProductId}" />
+
+                            <Avatar
+                                src="{Prod>ProductPicUrl}"
+                                displaySize="L"
+                                displayShape="Square"
+                                showBorder="false"
+                            />
                             <Text text="{Prod>Category}" />
-                            <Text text="{Prod>Name}" />
+                            <Text
+                                text="{ 
+                                path: 'Prod>Name',
+                                formatter: '.format.changeName'
+                             }"
+                            />
                             <Text text="{Prod>Description}" />
+
+                            <Text text="{Prod>Price} {Prod>CurrencyCode}" />
+                            <ObjectStatus
+                                text="{
+                                    path: 'Prod>Quantity',
+                                    formatter: '.format.changeText'
+                                }"
+                                state="{
+                                    path: 'Prod>Quantity',
+                                    formatter: '.formatter.changeState'
+                                }"
+                            />
                         </cells>
                     </ColumnListItem>
                 </items>
             </Table>
+            <!-- odata table -->
+            <!-- <Table
+                growing="true"
+                growingThreshold="20"
+                items="{prod1>/Products}"
+            >
+                <columns>
+                    <Column>
+                        <Text text='Product ID' />
+                    </Column>
+                    <Column>
+                        <Text text='Category' />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem vAlign="Bottom">
+                        <cells>
+                            <Text text="{prod1>ProductID}" />
+                            <Text text="{prod1>CategoryID}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table> -->
         </content>
     </Page>
 </mvc:View>
