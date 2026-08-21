@@ -8,6 +8,7 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("product.controller.View2", {
+        format: formatterfile,
         onInit: function () {
             var oProdJson = new JSONModel("../model/products.json");
             this.getView().setModel(oProdJson, "Prod");

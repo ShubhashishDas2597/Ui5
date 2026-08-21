@@ -76,14 +76,15 @@
                                 }"
                                 state="{
                                     path: 'Prod>Quantity',
-                                    formatter: '.formatter.changeState'
+                                    formatter: '.format.changeState'
                                 }"
+                                inverted="true"
                             />
                         </cells>
                     </ColumnListItem>
                 </items>
             </Table>
-            <!-- odata table -->
+            <!-- odata table working fully, for odata to work, we changed in manifest and ui5 yaml and ui local yaml files -->
             <!-- <Table
                 growing="true"
                 growingThreshold="20"
